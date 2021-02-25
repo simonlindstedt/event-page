@@ -1,0 +1,30 @@
+body {
+  font-family: sans-serif;
+}
+
+header {
+  color: var(--white);
+}
+
+header h1 {
+  font-size: 3em;
+}
+
+header p {
+  font-size: 1.2em;
+}
+
+.text {
+  line-height: 1.5em;
+}
+
+footer {
+  color: var(--ligthGrey);
+}
+
+footer .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
