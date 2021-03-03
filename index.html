@@ -4,11 +4,41 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/css/total.css" />
+    <!-- <link rel="stylesheet" href="/assets/css/total.css" /> -->
+    <link rel="stylesheet" href="assets/css/index.scss" />
     <title>Event Page</title>
   </head>
   <body>
-    <nav></nav>
+    <nav>
+      <button class="hamburger">
+        <svg
+          width="60"
+          height="50"
+          viewBox="0 0 60 50"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M60 2C60 0.89543 59.1046 0 58 0H2C0.895432 0 0 0.895431 0 2V8C0 9.10457 0.895431 10 2 10H58C59.1046 10 60 9.10457 60 8V2Z"
+            fill="black"
+          />
+          <path
+            d="M60 22C60 20.8954 59.1046 20 58 20H2C0.895432 20 0 20.8954 0 22V28C0 29.1046 0.895431 30 2 30H58C59.1046 30 60 29.1046 60 28V22Z"
+            fill="black"
+          />
+          <path
+            d="M60 42C60 40.8954 59.1046 40 58 40H2C0.895432 40 0 40.8954 0 42V48C0 49.1046 0.895431 50 2 50H58C59.1046 50 60 49.1046 60 48V42Z"
+            fill="black"
+          />
+        </svg>
+      </button>
+      <ul class="nav-list">
+        <li class="item">item</li>
+        <li class="item">item</li>
+        <li class="item">item</li>
+        <li class="item">item</li>
+      </ul>
+    </nav>
     <header>
       <img
         src="assets/images/stephen-dawson-NFrF4JQO9-c-unsplash.jpg"
@@ -169,7 +199,7 @@
         </div>
         <img
           class="item"
-          src="/assets/images/live-whats-new.83307ad25c6e.jpg"
+          src="/assets/images/alexander-popov-2z0dC1QoP3c-unsplash.jpg"
           loading="lazy"
         />
       </section>
@@ -268,5 +298,13 @@
         <div class="icon"></div>
       </div>
     </footer>
+    <script>
+      const hamburgerButton = document.querySelector(".hamburger");
+      const navList = document.querySelector(".nav-list");
+
+      hamburgerButton.addEventListener("click", () => {
+        navList.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>

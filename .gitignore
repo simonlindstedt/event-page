@@ -1,3 +1,5 @@
 .DS_Store
-assets/images
 node_modules
+dist
+.parcel-cache
+confidential
