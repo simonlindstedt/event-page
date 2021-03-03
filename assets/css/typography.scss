@@ -1,0 +1,56 @@
+@import "https://use.typekit.net/fbx4rpf.css";
+@import "variables";
+
+body {
+  font-family: futura-pt, sans-serif;
+}
+
+.nav-list {
+  .item {
+    font-size: 2em;
+    text-align: center;
+    color: $lightGrey;
+  }
+}
+
+header {
+  color: $white;
+  h1 {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3em;
+  }
+  p {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1em;
+  }
+}
+
+.text {
+  line-height: 1.5em;
+  p,
+  h2 {
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.5em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+}
+
+.attendance-form {
+  font-weight: 400;
+  font-style: normal;
+}
+
+footer {
+  color: $lightGrey;
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

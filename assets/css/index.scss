@@ -1,3 +1,6 @@
-body {
-  background-color: aqua;
-}
+@use 'typography';
+@use 'main';
+@use 'navigation';
+@use 'header';
+@use 'layout';
+@use 'footer';

@@ -3,8 +3,8 @@
   "type": "module",
   "scripts": {
     "start": "npx servor . index.html 4000 --reload --browse",
-    "build": "parcel build index.html",
-    "dev": "parcel index.html"
+    "build": "parcel build index.html --no-cache",
+    "dev": "parcel index.html --no-cache"
   },
   "devDependencies": {
     "parcel": "^2.0.0-beta.1",

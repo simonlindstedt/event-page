@@ -1,0 +1,35 @@
+@import "variables";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.drip {
+  width: 100%;
+  svg {
+    width: inherit;
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  padding: 0.5em;
+  background-color: $blue;
+  color: $white;
+  border: none;
+  box-shadow: $darkBlue 0px 3px;
+  transition-property: box-shadow, transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  &:hover {
+    box-shadow: $darkBlue 0px 3px 10px;
+    transform: scale(1.1);
+  }
+}
