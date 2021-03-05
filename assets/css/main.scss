@@ -8,6 +8,10 @@ body {
   margin: 0;
 }
 
+a:link {
+  text-decoration: none;
+}
+
 .drip {
   width: 100%;
   svg {
@@ -16,6 +20,7 @@ body {
 }
 
 .btn {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -48,9 +48,9 @@ header {
 footer {
   color: $lightGrey;
   .text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    p {
+      font-weight: 400;
+    }
   }
 }

@@ -9,22 +9,21 @@ footer {
   padding: 4em;
   height: fit-content;
   background-color: $black;
-}
+  .social-media-icons {
+    display: flex;
+  }
 
-.social-media-icons {
-  display: flex;
-}
+  .icon {
+    width: 2em;
+    height: 2em;
+    margin: 1em;
+    border-radius: 0.5em;
+    background-color: $lightGrey;
+  }
 
-.icon {
-  width: 2em;
-  height: 2em;
-  margin: 1em;
-  border-radius: 0.5em;
-  background-color: $lightGrey;
-}
-
-.logo {
-  width: 6em;
-  height: 6em;
-  background-color: $orange;
+  .logo {
+    svg {
+      width: 256px;
+    }
+  }
 }
