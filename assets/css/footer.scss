@@ -9,7 +9,12 @@ footer {
   padding: 4em;
   height: fit-content;
   background-color: $black;
-  .social-media-icons {
+  @media (min-width: 1090px) {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .social-media-icons,
+  .big-icons {
     display: flex;
   }
 
@@ -18,6 +23,14 @@ footer {
     height: 2em;
     margin: 1em;
     border-radius: 0.5em;
+    background-color: $lightGrey;
+  }
+
+  .big-icon {
+    width: 4em;
+    height: 4em;
+    margin: 1em;
+    border-radius: 8px;
     background-color: $lightGrey;
   }
 
