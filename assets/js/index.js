@@ -11,7 +11,7 @@ const contentBoxContent = document.querySelectorAll(".content-box *");
 let contentBoxIn = anime({
   targets: contentBoxContent,
   opacity: [0, 1],
-  delay: anime.stagger(200),
+  delay: anime.stagger(100),
   duration: 1000,
   easing: "easeInSine",
   autoplay: false,

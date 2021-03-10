@@ -1,11 +1,10 @@
-@use 'typography';
-@use 'main';
-@use 'navigation';
-@use 'header';
-@use 'layout';
-@use 'footer';
+@import "typography";
+@import "main";
+@import "navigation";
+@import "header";
+@import "layout";
+@import "footer";
 
 // max-width on text box in content box at bigger sizes?
 // write function for button-size
-
-// animations
+//
