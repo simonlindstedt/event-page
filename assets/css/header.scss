@@ -30,3 +30,23 @@ header {
     }
   }
 }
+
+.drip {
+  overflow-x: hidden;
+  position: relative;
+  span {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 96px;
+    background-color: $black;
+  }
+  svg {
+    width: 100%;
+  }
+  @media (max-width: 1400px) {
+    svg {
+      width: max-content;
+    }
+  }
+}

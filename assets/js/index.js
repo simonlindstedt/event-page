@@ -6,12 +6,10 @@ import anime from "animejs";
 import ScrollMagic from "scrollmagic";
 import "scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators";
 
-const contentBoxContent = document.querySelectorAll(".content-box *");
-
 let contentBoxIn = anime({
-  targets: contentBoxContent,
+  targets: ".content-box *",
   opacity: [0, 1],
-  delay: anime.stagger(100),
+  delay: anime.stagger(200),
   duration: 1000,
   easing: "easeInSine",
   autoplay: false,
@@ -30,8 +28,24 @@ let contentBoxScroll = new ScrollMagic.Scene({
 controller.addScene(contentBoxScroll);
 
 contentBoxScroll.on("enter", () => {
-  console.log("hello enter!");
   if (!contentBoxIn.completed) {
     contentBoxIn.play();
   }
 });
+
+function dripAnimation() {
+  anime({
+    targets: ".drip svg g path",
+    translateY: function () {
+      return anime.random(0, 50);
+    },
+    duration: 10000,
+    delay: anime.stagger(200, { from: "center", easing: "easeOutQuad" }),
+    loop: true,
+    autoplay: true,
+    easing: "easeInOutExpo",
+    direction: "alternate",
+    complete: dripAnimation,
+  });
+}
+dripAnimation();
