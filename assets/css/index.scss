@@ -1,9 +1,114 @@
 @import "typography";
 @import "main";
-@import "navigation";
+// @import "navigation";
 @import "header";
 @import "layout";
 @import "footer";
 
 // max-width on text box in content box at bigger sizes?
 // write function for button-size
+
+@import "variables";
+
+nav {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  height: 7em;
+  width: 100%;
+  background-color: $black;
+
+  .logo {
+    display: inline-block;
+    svg {
+      width: 128px;
+    }
+  }
+
+  .nav-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 3;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.2s ease-in-out;
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+    .item {
+      a {
+        transition: transform 0.3s ease-in-out,
+          background-color 0.3s ease-in-out, color 0.3s ease-out;
+        border-radius: 8px;
+        padding: 1em;
+        display: block;
+        color: $white;
+        &:hover {
+          color: $orange;
+          background-color: $almostWhite;
+          transform: scale(1.1);
+        }
+      }
+      // &:hover {
+      //   background-color: $almostWhite;
+      //   transform: scale(1.1);
+      //   a {
+      //     color: $orange;
+      //   }
+      // }
+    }
+  }
+
+  .nav-list-background {
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    border-radius: 50%;
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    padding: 0;
+    transition: transform 0.5s ease-in-out;
+    z-index: 2;
+  }
+
+  .hamburger {
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    background-color: $black;
+    border-radius: 50%;
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    border: none;
+    padding: 0;
+    z-index: 4;
+    transition: transform 0.1s ease-in-out;
+    &:hover {
+      transform: scale(1.05);
+    }
+    &:focus {
+      outline: none;
+    }
+    svg {
+      width: 24px;
+      height: 24px;
+      path {
+        fill: $white;
+      }
+    }
+  }
+}

@@ -55,13 +55,32 @@
         </svg>
       </button>
       <ul class="nav-list">
-        <li class="item">item one</li>
-        <li class="item">item two</li>
-        <li class="item">item three</li>
-        <li class="item">item four</li>
+        <li class="item">
+          <a href="#home">hem</a>
+        </li>
+        <li class="item">
+          <a href="#about">om festivalen</a>
+        </li>
+        <li class="item">
+          <a href="#attendance">anmäl intresse</a>
+        </li>
+        <li class="item">
+          <a href="#contact">kontakt</a>
+        </li>
       </ul>
+      <svg
+        viewBox="0 0 1440 85"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="wave"
+      >
+        <path
+          d="M0 55.0214L11.4 61.1253C22.9 67.3439 46 79.3798 69 70.2956C91.4 61.0394 114 30.663 137 30.577C160 30.663 183 61.0394 206 65.7105C228.6 70.2096 251 49.0034 274 48.9175C297.1 49.0034 320 70.2096 343 79.4658C365.7 88.5501 389 85.6844 411 76.4282C434.3 67.3439 457 51.8691 480 48.9175C502.9 45.8512 526 55.0214 549 50.4363C571.4 45.8512 594 27.5107 617 30.577C640 33.5287 663 58.1737 686 59.6065C708.6 61.0394 731 39.8332 754 29.0295C777.1 18.3405 800 18.3405 823 21.4068C845.7 24.3584 869 30.663 891 35.1621C914.3 39.8332 937 42.6989 960 47.37C982.9 51.8691 1006 58.1737 1029 51.9551C1051.4 45.8512 1074 27.5107 1097 30.577C1120 33.5287 1143 58.1737 1166 62.6728C1188.6 67.3439 1211 51.8691 1234 51.9551C1257.1 51.8691 1280 67.3439 1303 62.6728C1325.7 58.1737 1349 33.5287 1371 29.0295C1394.3 24.3584 1417 39.8332 1429 47.37L1440 55.0214V0H1428.6C1417.1 0 1394 0 1371 0C1348.6 0 1326 0 1303 0C1280 0 1257 0 1234 0C1211.4 0 1189 0 1166 0C1142.9 0 1120 0 1097 0C1074.3 0 1051 0 1029 0C1005.7 0 983 0 960 0C937.1 0 914 0 891 0C868.6 0 846 0 823 0C800 0 777 0 754 0C731.4 0 709 0 686 0C662.9 0 640 0 617 0C594.3 0 571 0 549 0C525.7 0 503 0 480 0C457.1 0 434 0 411 0C388.6 0 366 0 343 0C320 0 297 0 274 0C251.4 0 229 0 206 0C182.9 0 160 0 137 0C114.3 0 91 0 69 0C45.7 0 23 0 11 0H0V55.0214Z"
+          fill="black"
+        />
+      </svg>
     </nav>
-    <header>
+    <header id="home">
       <img
         src="assets/images/stephen-dawson-NFrF4JQO9-c-unsplash.jpg"
         alt="a party"
@@ -190,7 +209,7 @@
       </svg>
     </div>
     <main>
-      <section class="full-page content-box">
+      <section class="full-page content-box" id="about">
         <div class="text">
           <h2>Lorem ipsum <span style="color: #ed7102">dolor</span> sit.</h2>
           <p>
@@ -206,7 +225,7 @@
           alt="another party"
         />
       </section>
-      <section class="full-page center">
+      <section class="full-page center" id="attendance">
         <svg class="background">
           <defs>
             <style>
@@ -303,13 +322,13 @@
             dolor, rem praesentium!
           </p>
           <form action="" method="post">
-            <label for="first-name">Förnamn</label>
+            <label for="first-name">Förnamn<span>*</span></label>
             <input type="text" name="first-name" id="first-name" />
-            <label for="last-name">Efternamn</label>
+            <label for="last-name">Efternamn<span>*</span></label>
             <input type="text" name="last-name" id="last-name" />
-            <label for="email">Email</label>
+            <label for="email">Email<span>*</span></label>
             <input type="email" name="email" id="email" />
-            <label for="phone">Telefon</label>
+            <label for="phone">Telefon<span>*</span></label>
             <input type="tel" name="phone" id="phone" />
             <label for="performer">Vill du uppträda?</label>
             <div>
@@ -327,7 +346,7 @@
         </div>
       </section>
     </main>
-    <footer>
+    <footer id="contact">
       <div class="logo">
         <svg
           xmlns="http://www.w3.org/2000/svg"

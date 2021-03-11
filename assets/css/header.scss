@@ -31,9 +31,18 @@ header {
   }
 }
 
+.wave {
+  position: absolute;
+  top: 7em;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+
 .drip {
   overflow-x: hidden;
   position: relative;
+  margin-bottom: -195px;
   span {
     position: absolute;
     display: inline-block;
