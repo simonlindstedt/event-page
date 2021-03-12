@@ -37,6 +37,28 @@ nav {
       visibility: visible;
       opacity: 1;
     }
+    .item {
+      a {
+        transition: transform 0.3s ease-in-out,
+          background-color 0.3s ease-in-out, color 0.3s ease-out;
+        border-radius: 8px;
+        padding: 1em;
+        display: block;
+        color: $white;
+        &:hover {
+          color: $orange;
+          background-color: $almostWhite;
+          transform: scale(1.1);
+        }
+      }
+      // &:hover {
+      //   background-color: $almostWhite;
+      //   transform: scale(1.1);
+      //   a {
+      //     color: $orange;
+      //   }
+      // }
+    }
   }
 
   .nav-list-background {
