@@ -5,6 +5,10 @@ body {
   font-family: futura-pt, sans-serif;
 }
 
+.orange {
+  color: $orange;
+}
+
 .nav-list {
   .item {
     font-size: 2em;
@@ -24,6 +28,9 @@ header {
     font-weight: 700;
     font-style: normal;
     font-size: 1em;
+  }
+  .welcome {
+    font-size: 2em;
   }
 }
 

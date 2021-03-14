@@ -8,7 +8,7 @@ if (urlParameters.has("first-name")) {
   let firstName = capitalize(urlParameters.get("first-name").toLowerCase());
   let nameTag = document.createElement("p");
   nameTag.classList.add("welcome");
-  nameTag.innerText = `Välkommen ${firstName}!`;
+  nameTag.innerHTML = `Välkommen <span class="orange">${firstName}!</span>`;
   headerText.append(nameTag);
   inputFirstName.setAttribute("placeholder", firstName);
 }

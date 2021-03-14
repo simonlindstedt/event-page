@@ -17,16 +17,15 @@ function toggleMenu() {
       scale = (width / 80) * 3;
     }
     navListBackground.style.transform = `scale(${scale})`;
+    document.body.style.overflow = "hidden";
   } else {
     navListBackground.style.transform = `scale(0)`;
+    document.body.style.overflow = "auto";
   }
 }
 
-hamburgerButton.addEventListener("click", toggleMenu);
-navLinks.forEach((link) => {
-  link.addEventListener("click", toggleMenu);
-});
-
-scrollDownButton.addEventListener("click", () => {
+function scrollDown() {
   window.scroll(0, window.innerHeight);
-});
+}
+
+export { toggleMenu, scrollDown, hamburgerButton, scrollDownButton, navLinks };
