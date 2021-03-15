@@ -35,3 +35,29 @@ a:link {
     transform: scale(1.1);
   }
 }
+nav {
+  .wave {
+    position: absolute;
+    top: 7em;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+  }
+}
+
+.wave-divider {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  svg {
+    &.wave-up {
+      position: absolute;
+      bottom: -5px;
+    }
+    &.wave {
+      position: absolute;
+      top: 0px;
+    }
+  }
+}

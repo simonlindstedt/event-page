@@ -25,7 +25,8 @@ function toggleMenu() {
 }
 
 function scrollDown() {
-  window.scroll(0, window.innerHeight);
+  const afterHeader = document.querySelector("section");
+  afterHeader.scrollIntoView();
 }
 
 export { toggleMenu, scrollDown, hamburgerButton, scrollDownButton, navLinks };

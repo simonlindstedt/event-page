@@ -19,9 +19,10 @@ for (let i = 0; i < slides.length; i++) {
 }
 gallery.appendChild(dots);
 slider.addEventListener("scroll", () => {
-  let slide = slider.scrollLeft / window.innerWidth;
-  if (slide === Math.floor(slide)) {
-    let dot = dots.children[slide];
+  let slideWidth = slides[0].scrollWidth;
+  let slideLength = slider.scrollLeft / slideWidth;
+  if (slideLength === Math.floor(slideLength)) {
+    let dot = dots.children[slideLength];
     for (let i = 0; i < dots.children.length; i++) {
       dots.children[i].classList.remove("active");
     }
