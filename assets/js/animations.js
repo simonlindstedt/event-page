@@ -27,8 +27,6 @@ let waveUp = anime({
   direction: "alternate",
 });
 
-console.log(document.querySelectorAll("header .text *"));
-
 let headerTextFadeIn = anime({
   targets: "header .text *",
   opacity: [0, 1],

@@ -6,6 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/index.scss" />
     <title>Event Page</title>
+    <style>
+      @keyframes jump {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.2);
+        }
+      }
+
+      .preloader {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000;
+        color: #fff;
+        z-index: 5;
+        transition: opacity 0.7s ease-out, transform 0.5s ease-out;
+      }
+
+      .preloader svg {
+        animation-name: jump;
+        animation-duration: 1s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
+        width: 200px;
+      }
+
+      .preloader.done {
+        transform: scale(1.5);
+        opacity: 0;
+      }
+    </style>
   </head>
   <body>
     <section class="preloader">
@@ -108,8 +147,14 @@
     </nav>
     <header id="home">
       <img
-        src="assets/images/stephen-dawson-NFrF4JQO9-c-unsplash.jpg"
-        alt="a party"
+        src="/assets/images/header.jpg"
+        srcset="
+          /assets/images/header.jpg       2000w,
+          /assets/images/header@0.75x.jpg 1500w,
+          /assets/images/header@0.5x.jpg  1000w,
+          /assets/images/header@0.33x.jpg  600w
+        "
+        alt="full page image of a party"
         class="cover"
         loading="lazy"
       />
@@ -247,8 +292,15 @@
           </p>
         </div>
         <img
-          src="assets/images/alexander-popov-2z0dC1QoP3c-unsplash.jpg"
-          alt="another party"
+          src="/assets/images/cool-club.jpg"
+          srcset="
+            /assets/images/cool-club.jpg       2000w,
+            /assets/images/cool-club@0.75x.jpg 1500w,
+            /assets/images/cool-club@0.5x.jpg  1000w,
+            /assets/images/cool-club@0.33x.jpg  600w
+          "
+          alt="a club with people dancing"
+          loading="lazy"
         />
         <span class="wave-divider">
           <svg
@@ -281,24 +333,39 @@
           <div class="slide">
             <h3 class="artist">artist ett</h3>
             <img
-              src="/assets/images/anthony-da-cruz--8wFHfbkt10-unsplash.jpg"
-              alt="temp"
+              src="/assets/images/artist1.jpg"
+              srcset="
+                /assets/images/artist1.jpg       2000w,
+                /assets/images/artist1@0.75x.jpg 1500w,
+                /assets/images/artist1@0.5x.jpg  1000w,
+                /assets/images/artist1@0.33x.jpg  600w
+              "
               loading="lazy"
             />
           </div>
           <div class="slide">
             <h3 class="artist">artist två</h3>
             <img
-              src="/assets/images/hanny-naibaho-D_LYjtHnDXE-unsplash.jpg"
-              alt="temp"
+              src="/assets/images/artist2.jpg"
+              srcset="
+                /assets/images/artist2.jpg       2000w,
+                /assets/images/artist2@0.75x.jpg 1500w,
+                /assets/images/artist2@0.5x.jpg  1000w,
+                /assets/images/artist2@0.33x.jpg  600w
+              "
               loading="lazy"
             />
           </div>
           <div class="slide">
             <h3 class="artist">artist tre</h3>
             <img
-              src="/assets/images/sam-moqadam-Ho91qD-tmBw-unsplash.jpg"
-              alt="temp"
+              src="/assets/images/artist3.jpg"
+              srcset="
+                /assets/images/artist3.jpg       2000w,
+                /assets/images/artist3@0.75x.jpg 1500w,
+                /assets/images/artist3@0.5x.jpg  1000w,
+                /assets/images/artist3@0.33x.jpg  600w
+              "
               loading="lazy"
             />
           </div>

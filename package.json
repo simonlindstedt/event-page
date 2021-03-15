@@ -2,7 +2,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "npx servor . index.html 4000 --reload --browse",
+    "start": "npx servor dist index.html 4000 --reload --browse",
     "build": "parcel build index.html",
     "dev": "parcel index.html --port 8000"
   },
