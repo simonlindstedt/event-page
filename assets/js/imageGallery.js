@@ -1,24 +1,27 @@
 const gallery = document.querySelector(".gallery");
-const slider = document.querySelector(".images");
+export const slider = document.querySelector(".images");
 const slides = slider.querySelectorAll(".slide");
 const dots = document.createElement("div");
 dots.classList.add("indicators");
 
-for (let i = 0; i < slides.length; i++) {
-  let dot = document.createElement("button");
-  if (i === 0) {
-    dot.classList.add("active");
-  }
-  dot.addEventListener("click", () => {
-    slider.scroll({
-      left: window.innerWidth * i,
-      behavior: "smooth",
+export function setUpGallery() {
+  for (let i = 0; i < slides.length; i++) {
+    let dot = document.createElement("button");
+    if (i === 0) {
+      dot.classList.add("active");
+    }
+    dot.addEventListener("click", () => {
+      slider.scroll({
+        left: window.innerWidth * i,
+        behavior: "smooth",
+      });
     });
-  });
-  dots.appendChild(dot);
+    dots.appendChild(dot);
+  }
+  gallery.appendChild(dots);
 }
-gallery.appendChild(dots);
-slider.addEventListener("scroll", () => {
+
+export function imageSwipe() {
   let slideWidth = slides[0].scrollWidth;
   let slideLength = slider.scrollLeft / slideWidth;
   if (slideLength === Math.floor(slideLength)) {
@@ -28,4 +31,4 @@ slider.addEventListener("scroll", () => {
     }
     dot.classList.add("active");
   }
-});
+}

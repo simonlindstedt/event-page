@@ -1,18 +1,54 @@
-import "./preloader.js";
-import "./animations.js";
-import "./imageGallery.js";
-import "./queryParams.js";
-
+import { headerScroll, contentBoxScroll } from "./scrollMagic.js";
 import {
-  toggleMenu,
-  scrollDown,
   hamburgerButton,
-  scrollDownButton,
   navLinks,
+  scrollDown,
+  scrollDownButton,
+  toggleMenu,
 } from "./navigation.js";
+import { firstNameActions, lastNameActions } from "./queryParams.js";
+import {
+  contentBoxText,
+  dripAnimation,
+  headerParallax,
+  scrollButtonAnimation,
+} from "./animations.js";
+import { imageSwipe, setUpGallery, slider } from "./imageGallery.js";
 
+// navigation events
 hamburgerButton.addEventListener("click", toggleMenu);
-navLinks.forEach((navLink) => {
-  navLink.addEventListener("click", toggleMenu);
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", toggleMenu);
 });
+
+// run queryParam actions
+firstNameActions();
+lastNameActions();
+
+// header events
 scrollDownButton.addEventListener("click", scrollDown);
+
+headerScroll.on("enter", () => {
+  setTimeout(() => {
+    scrollButtonAnimation.play();
+  }, 1000);
+});
+
+headerScroll.on("progress", (event) => {
+  headerParallax.seek(headerParallax.duration * event.progress);
+});
+
+// content-box events
+contentBoxScroll.on("enter", () => {
+  if (!contentBoxText.completed) {
+    contentBoxText.play();
+  }
+});
+
+// start drip animation
+dripAnimation();
+
+// image gallery
+setUpGallery();
+slider.addEventListener("scroll", imageSwipe);

@@ -1,10 +1,10 @@
-const hamburgerButton = document.querySelector(".hamburger");
+export const hamburgerButton = document.querySelector(".hamburger");
 const navListBackground = document.querySelector(".nav-list-background");
 const navList = document.querySelector(".nav-list");
-const navLinks = navList.querySelectorAll("a");
-const scrollDownButton = document.querySelector(".scroll-down");
+export const navLinks = navList.querySelectorAll("a");
+export const scrollDownButton = document.querySelector(".scroll-down");
 
-function toggleMenu() {
+export function toggleMenu() {
   navListBackground.classList.toggle("active");
   navList.classList.toggle("active");
   if (navListBackground.classList.contains("active")) {
@@ -24,9 +24,7 @@ function toggleMenu() {
   }
 }
 
-function scrollDown() {
+export function scrollDown() {
   const afterHeader = document.querySelector("section");
   afterHeader.scrollIntoView();
 }
-
-export { toggleMenu, scrollDown, hamburgerButton, scrollDownButton, navLinks };
