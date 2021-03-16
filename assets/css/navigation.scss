@@ -30,7 +30,7 @@ nav {
     margin: 0;
     z-index: 3;
     opacity: 0;
-    transition: visibility 0s, opacity 0.2s ease-in-out;
+    transition: visibility 0s, opacity 0.7s ease-in-out;
     &.active {
       visibility: visible;
       opacity: 1;
@@ -49,13 +49,6 @@ nav {
           transform: scale(1.1);
         }
       }
-      // &:hover {
-      //   background-color: $almostWhite;
-      //   transform: scale(1.1);
-      //   a {
-      //     color: $orange;
-      //   }
-      // }
     }
   }
 
