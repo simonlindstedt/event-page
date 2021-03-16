@@ -2,7 +2,6 @@
 import anime from "animejs";
 // scroll magic
 import ScrollMagic from "scrollmagic";
-import "scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators";
 
 let wave = anime({
   targets: ".wave path",
@@ -99,12 +98,12 @@ let headerScroll = new ScrollMagic.Scene({
   triggerElement: "header",
   triggerHook: "onLeave",
   duration: "100%",
-}).addIndicators();
+});
 
 let contentBoxScroll = new ScrollMagic.Scene({
   triggerElement: ".content-box",
   triggerHook: "onCenter",
-}).addIndicators();
+});
 
 controller.addScene(headerScroll);
 controller.addScene(contentBoxScroll);

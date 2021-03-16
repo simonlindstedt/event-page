@@ -1,4 +1,4 @@
-@import "variables";
+// @import "variables";
 
 footer {
   display: flex;
@@ -13,30 +13,20 @@ footer {
     flex-direction: row;
     justify-content: space-evenly;
   }
-  .social-media-icons,
-  .big-icons {
+  .social-media-icons {
     display: flex;
   }
-
-  .icon {
-    width: 2em;
-    height: 2em;
-    margin: 1em;
-    border-radius: 0.5em;
-    background-color: $lightGrey;
-  }
-
-  .big-icon {
-    width: 4em;
-    height: 4em;
-    margin: 1em;
-    border-radius: 8px;
-    background-color: $lightGrey;
-  }
-
   .logo {
     svg {
       width: 256px;
+    }
+  }
+  svg {
+    &.icon {
+      margin: 8px;
+      width: 32px;
+      height: 32px;
+      fill: $lightGrey;
     }
   }
 }

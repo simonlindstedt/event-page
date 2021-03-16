@@ -1,5 +1,5 @@
-@import "https://use.typekit.net/fbx4rpf.css";
-@import "variables";
+// @import "https://use.typekit.net/fbx4rpf.css";
+// @import "variables";
 
 body {
   font-family: futura-pt, sans-serif;
@@ -54,6 +54,12 @@ header {
 
 footer {
   color: $lightGrey;
+  a {
+    color: inherit;
+    &:hover {
+      color: $orange;
+    }
+  }
   .text {
     text-align: center;
     p {

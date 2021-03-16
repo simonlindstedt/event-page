@@ -1,8 +1,8 @@
 document.body.style.overflow = "hidden";
-window.addEventListener("load", (e) => {
+window.addEventListener("load", () => {
   const preloader = document.querySelector(".preloader");
-  preloader.classList.add("done");
   document.body.style.overflow = "auto";
+  preloader.classList.add("done");
   setTimeout(() => {
     preloader.remove();
   }, 700);
