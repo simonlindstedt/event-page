@@ -2,8 +2,8 @@ nav {
   position: absolute;
   display: flex;
   align-items: center;
-  padding: 1em;
-  height: 7em;
+  padding: 16px;
+  height: 112px;
   width: 100%;
   background-color: $black;
 
@@ -91,5 +91,13 @@ nav {
         fill: $white;
       }
     }
+  }
+
+  .wave {
+    position: absolute;
+    top: 112px;
+    left: 0;
+    width: 100%;
+    z-index: 0;
   }
 }

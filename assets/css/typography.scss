@@ -14,23 +14,6 @@ body {
   }
 }
 
-header {
-  color: $white;
-  h1 {
-    font-weight: 700;
-    font-style: normal;
-    font-size: 3em;
-  }
-  p {
-    font-weight: 700;
-    font-style: normal;
-    font-size: 1em;
-  }
-  .welcome {
-    font-size: 2em;
-  }
-}
-
 .text {
   line-height: 1.5em;
   p,
@@ -44,9 +27,28 @@ header {
   }
 }
 
+header {
+  color: $white;
+  .text {
+    h1 {
+      font-size: 3em;
+    }
+    p {
+      font-size: 1em;
+    }
+    .welcome {
+      font-size: 1.5em;
+    }
+  }
+}
+
 .attendance-form {
   font-weight: 400;
   font-style: normal;
+  .btn {
+    font-family: futura-pt, sans-serif;
+    font-weight: 700;
+  }
 }
 
 footer {
