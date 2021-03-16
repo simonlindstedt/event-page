@@ -40,9 +40,11 @@ header {
 
 section {
   position: relative;
+
   &.full-page {
     height: 100vh;
   }
+
   &.content-box {
     display: flex;
     flex-direction: column;
@@ -66,6 +68,7 @@ section {
       justify-content: space-around;
     }
   }
+
   &.gallery {
     display: flex;
     justify-content: center;
@@ -132,6 +135,7 @@ section {
       }
     }
   }
+
   &.attendance-form {
     height: fit-content;
     min-height: 100vh;
@@ -154,6 +158,11 @@ section {
         flex-direction: column;
         * {
           margin: 8px 0;
+        }
+        input {
+          background-color: $lightGrey;
+          border: 1px solid $black;
+          border-radius: 4px;
         }
       }
     }
