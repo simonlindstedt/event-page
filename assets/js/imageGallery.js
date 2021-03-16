@@ -7,12 +7,13 @@ dots.classList.add("indicators");
 export function setUpGallery() {
   for (let i = 0; i < slides.length; i++) {
     let dot = document.createElement("button");
+    dot.setAttribute("aria-label", `show image number ${i + 1}`);
     if (i === 0) {
       dot.classList.add("active");
     }
     dot.addEventListener("click", () => {
       slider.scroll({
-        left: window.innerWidth * i,
+        left: slides[i].scrollWidth * i,
         behavior: "smooth",
       });
     });
@@ -21,7 +22,7 @@ export function setUpGallery() {
   gallery.appendChild(dots);
 }
 
-export function imageSwipe() {
+export function changeImage() {
   let slideWidth = slides[0].scrollWidth;
   let slideLength = slider.scrollLeft / slideWidth;
   if (slideLength === Math.floor(slideLength)) {

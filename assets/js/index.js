@@ -13,7 +13,7 @@ import {
   headerParallax,
   scrollButtonAnimation,
 } from "./animations.js";
-import { imageSwipe, setUpGallery, slider } from "./imageGallery.js";
+import { changeImage, setUpGallery, slider } from "./imageGallery.js";
 
 // navigation events
 hamburgerButton.addEventListener("click", toggleMenu);
@@ -51,4 +51,4 @@ dripAnimation();
 
 // image gallery
 setUpGallery();
-slider.addEventListener("scroll", imageSwipe);
+slider.addEventListener("scroll", changeImage);
