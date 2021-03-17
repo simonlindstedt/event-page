@@ -50,7 +50,10 @@ section {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding: 16px;
+    padding: 32px;
+    .text {
+      max-width: 600px;
+    }
     img {
       object-fit: cover;
       width: 100%;
@@ -58,7 +61,8 @@ section {
     }
     @media (min-width: 1200px) {
       .text {
-        width: 300px;
+        width: 400px;
+        margin-right: 48px;
       }
       img {
         max-width: 75%;
@@ -68,16 +72,35 @@ section {
       justify-content: space-around;
     }
   }
-
   &.gallery {
     display: flex;
     justify-content: center;
-    .title {
+    .cow-title {
+      transform: rotate(18deg);
       position: absolute;
-      z-index: 1;
-      top: 16px;
-      font-size: 3em;
+      top: 48px;
       color: $white;
+      width: 192px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media (min-width: 1400px) {
+        width: 256px;
+        top: 64px;
+        h2 {
+          font-size: 2em;
+        }
+      }
+      svg {
+        position: absolute;
+        z-index: 0;
+        width: inherit;
+      }
+      h2 {
+        transform: rotate(-23deg);
+        font-size: 1.6em;
+        z-index: 1;
+      }
     }
     .images {
       scroll-snap-type: x mandatory;
@@ -91,9 +114,12 @@ section {
         height: 100vh;
         scroll-snap-align: center;
         .artist {
+          background-color: $black;
+          border-radius: 4px;
+          padding: 8px 12px;
           position: absolute;
           color: $white;
-          font-size: 2em;
+          font-size: 1.5em;
           bottom: 64px;
         }
         img {

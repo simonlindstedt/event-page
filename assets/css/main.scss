@@ -13,3 +13,13 @@ body {
 a:link {
   text-decoration: none;
 }
+
+button {
+  &:focus {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: $orange;
+    outline-style: auto;
+  }
+}
