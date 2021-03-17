@@ -19,7 +19,7 @@ export function toggleMenu() {
     navListBackground.style.transform = `scale(${scale})`;
     document.body.style.overflow = "hidden";
   } else {
-    navListBackground.style.transform = `scale(0)`;
+    navListBackground.style.transform = `scale(1)`;
     document.body.style.overflow = "auto";
   }
 }
