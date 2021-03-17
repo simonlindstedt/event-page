@@ -1,0 +1,30 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 112px;
+  height: fit-content;
+  background-color: $black;
+  @media (min-width: 1090px) {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .social-media-icons {
+    display: flex;
+  }
+  .logo {
+    svg {
+      width: 256px;
+    }
+  }
+  svg {
+    &.icon {
+      margin: 8px;
+      width: 32px;
+      height: 32px;
+      fill: $lightGrey;
+    }
+  }
+}

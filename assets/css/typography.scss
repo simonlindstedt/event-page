@@ -1,0 +1,68 @@
+body {
+  font-family: futura-pt, sans-serif;
+}
+
+.orange {
+  color: $orange;
+}
+
+.nav-list {
+  .item {
+    font-size: 1.5em;
+    text-align: center;
+    color: $lightGrey;
+  }
+}
+
+.text {
+  line-height: 1.5em;
+  p,
+  h2 {
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.5em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+}
+
+header {
+  color: $white;
+  .text {
+    h1 {
+      font-size: 3em;
+    }
+    p {
+      font-size: 1em;
+    }
+    .welcome {
+      font-size: 1.5em;
+    }
+  }
+}
+
+.attendance-form {
+  font-weight: 400;
+  font-style: normal;
+  .btn {
+    font-family: futura-pt, sans-serif;
+    font-weight: 700;
+  }
+}
+
+footer {
+  color: $lightGrey;
+  a {
+    color: inherit;
+    &:hover {
+      color: $orange;
+    }
+  }
+  .text {
+    text-align: center;
+    p {
+      font-weight: 400;
+    }
+  }
+}
