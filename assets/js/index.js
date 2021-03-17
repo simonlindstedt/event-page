@@ -15,16 +15,16 @@ import {
 } from "./animations.js";
 import { changeImage, setUpGallery, slider } from "./imageGallery.js";
 
+// run queryParam actions
+firstNameActions();
+lastNameActions();
+
 // navigation events
 hamburgerButton.addEventListener("click", toggleMenu);
 
 navLinks.forEach((link) => {
   link.addEventListener("click", toggleMenu);
 });
-
-// run queryParam actions
-firstNameActions();
-lastNameActions();
 
 // header events
 scrollDownButton.addEventListener("click", scrollDown);

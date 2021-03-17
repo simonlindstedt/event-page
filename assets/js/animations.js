@@ -26,11 +26,12 @@ const waveUp = anime({
 const headerTextFadeIn = anime({
   targets: "header .text *",
   opacity: [0, 1],
-  delay: anime.stagger(200),
-  duration: 3500,
+  delay: anime.stagger(1000),
+  duration: 4000,
   easing: "easeOutSine",
 });
 
+//css animation instead?
 const headerImageGrow = anime({
   targets: "header img",
   scale: 1.05,
@@ -38,6 +39,7 @@ const headerImageGrow = anime({
   easing: "easeOutSine",
 });
 
+//css animation instead?
 export const scrollButtonAnimation = anime({
   targets: ".scroll-down",
   scale: 1.2,
@@ -51,13 +53,14 @@ export const headerParallax = anime({
   targets: "header .text",
   translateY: -50,
   opacity: [1, 0.5],
-  delay: function (stuff, i) {
+  delay: function (nodes, i) {
     return i * 100;
   },
   easing: "easeOutCubic",
   autoplay: false,
 });
 
+//css animation instead?
 export const contentBoxText = anime({
   targets: ".content-box .orange",
   color: ["#000", "#ed7102"],

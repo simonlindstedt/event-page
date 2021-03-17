@@ -11,14 +11,14 @@ export function firstNameActions() {
     nameTag.classList.add("welcome");
     nameTag.innerHTML = `Välkommen <span class="orange">${firstName}!</span>`;
     headerText.append(nameTag);
-    inputFirstName.setAttribute("placeholder", firstName);
+    inputFirstName.setAttribute("value", firstName);
   }
 }
 
 export function lastNameActions() {
   if (urlParameters.has("last-name")) {
     const lastName = capitalize(urlParameters.get("last-name").toLowerCase());
-    inputlastName.setAttribute("placeholder", lastName);
+    inputlastName.setAttribute("value", lastName);
   }
 }
 
