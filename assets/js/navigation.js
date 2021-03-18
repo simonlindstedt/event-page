@@ -5,6 +5,7 @@ export const navLinks = navList.querySelectorAll("a");
 export const scrollDownButton = document.querySelector(".scroll-down");
 
 export function toggleMenu() {
+  hamburgerButton.classList.toggle("active");
   navListBackground.classList.toggle("active");
   navList.classList.toggle("active");
   if (navListBackground.classList.contains("active")) {

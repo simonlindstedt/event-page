@@ -77,7 +77,27 @@ nav {
     border: none;
     padding: 0;
     z-index: 4;
-    transition: transform 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out, background-color 0.5s ease-in-out;
+    &.active {
+      background-color: $white;
+      svg {
+        path {
+          fill: $orange;
+        }
+        path:nth-child(1) {
+          transform-origin: top left;
+          transform: scale(0.7);
+          transform: rotate(45deg) translate(10px, -9px);
+        }
+        path:nth-child(2) {
+          transform: translateX(160px);
+        }
+        path:nth-child(3) {
+          transform-origin: top left;
+          transform: rotate(-45deg) translate(-26px, -5px);
+        }
+      }
+    }
     &:hover {
       transform: scale(1.05);
     }
@@ -85,6 +105,7 @@ nav {
       width: 24px;
       height: 24px;
       path {
+        transition: transform 0.5s ease-out;
         fill: $white;
       }
     }
