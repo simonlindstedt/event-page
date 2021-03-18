@@ -5,21 +5,3 @@
 @import "header";
 @import "layout";
 @import "footer";
-
-// write function for button/icon-size
-
-@keyframes grow {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.05);
-  }
-}
-
-header {
-  img {
-    transform-origin: center;
-    animation: grow 4s ease-out 0s 1 normal forwards;
-  }
-}
