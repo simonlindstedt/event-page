@@ -7,12 +7,7 @@ import {
   toggleMenu,
 } from "./navigation.js";
 import { firstNameActions, lastNameActions } from "./queryParams.js";
-import {
-  contentBoxText,
-  dripAnimation,
-  headerParallax,
-  scrollButtonAnimation,
-} from "./animations.js";
+import { contentBoxText, dripAnimation, headerParallax } from "./animations.js";
 import { changeImage, setUpGallery, slider } from "./imageGallery.js";
 
 // run queryParam actions
@@ -28,12 +23,6 @@ navLinks.forEach((link) => {
 
 // header events
 scrollDownButton.addEventListener("click", scrollDown);
-
-headerScroll.on("enter", () => {
-  setTimeout(() => {
-    scrollButtonAnimation.play();
-  }, 1000);
-});
 
 headerScroll.on("progress", (event) => {
   headerParallax.seek(headerParallax.duration * event.progress);

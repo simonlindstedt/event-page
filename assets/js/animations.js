@@ -23,35 +23,9 @@ const waveUp = anime({
   direction: "alternate",
 });
 
-const headerTextFadeIn = anime({
-  targets: "header .text *",
-  opacity: [0, 1],
-  delay: anime.stagger(1000),
-  duration: 4000,
-  easing: "easeOutSine",
-});
-
-//css animation instead?
-const headerImageGrow = anime({
-  targets: "header img",
-  scale: 1.05,
-  duration: 3500,
-  easing: "easeOutSine",
-});
-
-//css animation instead?
-export const scrollButtonAnimation = anime({
-  targets: ".scroll-down",
-  scale: 1.2,
-  duration: 2000,
-  autoplay: false,
-  loop: true,
-  direction: "alternate",
-});
-
 export const headerParallax = anime({
   targets: "header .text",
-  translateY: -50,
+  translateY: -30,
   opacity: [1, 0.5],
   delay: function (nodes, i) {
     return i * 100;
@@ -60,14 +34,12 @@ export const headerParallax = anime({
   autoplay: false,
 });
 
-//css animation instead?
 export const contentBoxText = anime({
   targets: ".content-box .orange",
   color: ["#000", "#ed7102"],
-  scale: 1.2,
-  duration: 1000,
+  duration: 3000,
   delay: 500,
-  easing: "easeOutSine",
+  easing: "easeInOutSine",
   autoplay: false,
 });
 
@@ -77,7 +49,7 @@ export function dripAnimation() {
     translateY: function () {
       return anime.random(0, 50);
     },
-    duration: 10000,
+    duration: 8000,
     delay: anime.stagger(200, { from: "center" }),
     loop: true,
     autoplay: true,

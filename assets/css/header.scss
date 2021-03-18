@@ -1,3 +1,20 @@
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
 header {
   position: relative;
   overflow: hidden;
@@ -8,8 +25,31 @@ header {
   text-align: center;
   width: 100%;
   height: 100vh;
+  .text {
+    * {
+      opacity: 0;
+    }
+    h1 {
+      animation: fade 1.5s ease-in 0s 1 normal forwards;
+    }
+    p {
+      animation: fade 1.5s ease-in 0.7s 1 normal forwards;
+    }
+    .welcome {
+      animation: fade 1.5s ease-in 1s 1 normal forwards;
+      span {
+        animation: fade 1.5s ease-in 1.2s 1 normal forwards;
+      }
+    }
+  }
   .scroll-down {
-    position: absolute;
+    opacity: 0;
+    &.pulse {
+      animation: pulse 1s cubic-bezier(0.52, -0.19, 0.46, 1.17) 7s infinite
+          alternate backwards,
+        fade 1s ease-in 1.5s 1 normal forwards;
+      position: absolute;
+    }
     bottom: 32px;
     cursor: pointer;
     border: none;
