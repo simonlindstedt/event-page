@@ -1,5 +1,6 @@
 import anime from "animejs";
 
+// for the wavey bits
 const wave = anime({
   targets: ".wave path",
   d: [
@@ -12,6 +13,7 @@ const wave = anime({
   direction: "alternate",
 });
 
+// for the wavey bits pointing upwards
 const waveUp = anime({
   targets: ".wave-up path",
   d: [
@@ -43,6 +45,7 @@ export const contentBoxText = anime({
   autoplay: false,
 });
 
+// for the "dripping" animation between the header and the first section
 export function dripAnimation() {
   anime({
     targets: ".drip svg g path",

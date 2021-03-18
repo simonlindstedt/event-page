@@ -4,6 +4,7 @@ const slides = slider.querySelectorAll(".slide");
 const dots = document.createElement("div");
 dots.classList.add("indicators");
 
+// creates the clickable dots for the image gallery based on the amount of slides
 export function setUpGallery() {
   for (let i = 0; i < slides.length; i++) {
     let dot = document.createElement("button");
@@ -22,6 +23,7 @@ export function setUpGallery() {
   gallery.appendChild(dots);
 }
 
+// scrolls the gallery by one image
 export function changeImage() {
   let slideWidth = slides[0].scrollWidth;
   let slideLength = slider.scrollLeft / slideWidth;

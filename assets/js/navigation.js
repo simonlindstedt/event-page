@@ -8,6 +8,7 @@ export function toggleMenu() {
   hamburgerButton.classList.toggle("active");
   navListBackground.classList.toggle("active");
   navList.classList.toggle("active");
+  // scales the background-circle for the navigation
   if (navListBackground.classList.contains("active")) {
     let height = window.innerHeight;
     let width = window.innerWidth;
