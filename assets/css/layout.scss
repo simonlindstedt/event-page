@@ -126,7 +126,7 @@ section {
         justify-content: center;
         min-width: 100vw;
         height: 100vh;
-        scroll-snap-align: center;
+        scroll-snap-align: start;
         .artist {
           background-color: $black;
           border-radius: 4px;
@@ -166,8 +166,10 @@ section {
     }
     @media (min-width: 1200px) {
       .images {
+        overflow-x: hidden;
         .slide {
-          min-width: 33vw;
+          min-width: unset;
+          max-width: calc(100vw / 3);
         }
       }
       .indicators {
